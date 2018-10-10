@@ -8,7 +8,15 @@ import cl.clubhipico.clubhipico_jcvargas.object.PersonaObject;
 
 public class ClubHipicoMain {
 	
+	public void compararCaballo (CaballoObject caballo1, CaballoObject caballo2) {
+		
+	}
+	
 	public static void main (String[] args) {
+		
+		ClubHipicoMain chmain = new ClubHipicoMain();
+		chmain.compararCaballo(new CaballoObject(), new CaballoObject());
+		
 		/* Declarando e inicializando CarreraObjet */
 		CarreraObject carrera = new CarreraObject();
 		

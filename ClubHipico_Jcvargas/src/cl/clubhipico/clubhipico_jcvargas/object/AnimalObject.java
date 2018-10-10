@@ -2,7 +2,9 @@ package cl.clubhipico.clubhipico_jcvargas.object;
 
 import cl.clubhipico.clubhipico_jcvargas.enums.SexoEnum;
 
-public class AnimalObject {
+/* public class AnimalObject {  
+* Si colocamos el modificador final, no podra ser heredada */
+public class AnimalObject {  
 
 	private String nombre;
 	private int peso;
