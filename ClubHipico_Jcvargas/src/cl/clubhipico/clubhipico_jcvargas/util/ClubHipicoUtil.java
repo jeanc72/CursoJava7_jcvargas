@@ -32,9 +32,55 @@ public class ClubHipicoUtil {
 				System.out.println("Se requiere por lo menos un jinete y un caballo");
 			}
 			// Accedemos al primer jinete y evaluamos que sea sexo masculino
-			if (jinetes[0].getSexo()!=SexoEnum.Macho) {
+			if (jinetes[0].getSexo()!=SexoEnum.Masculino) {
 				System.out.println("El primer jinete tiene que ser de sexo masculino...");
 			}
+			
+			System.out.println("");
+			System.out.println("Opcion 1: FOR - Contador incremental");
+			for (int i=0; i<jinetes.length; i++){
+				System.out.println("Sexo Jinete " + (i+1) + " : " + jinetes[i].getSexo());
+				if (jinetes[i].getSexo()==SexoEnum.Femenino) {
+					System.out.println("Esta carrera es para jinetes masculino");
+				}
+			}
+			
+			System.out.println("");
+			System.out.println("Opcion 2: FOR - Foreach");
+			int i = 0;
+			//FOR ([Objeto Nuevo] : [ARREGLO])
+			for (JineteObject jinete: jinetes){
+				System.out.println("Sexo Jinete " + (i+1) + " : " + jinete.getSexo());
+				if (jinete.getSexo()==SexoEnum.Femenino) {
+					System.out.println("Esta carrera es para jinetes masculino");
+				}
+				i++;
+			}
+			
+			System.out.println("");
+			System.out.println("Opcion 3: WHILE");
+			i = 0; //Ya existe y lo volvemos a utilizar
+			// SIEMPRE se tiene ue cumplir la condicion
+			while (i<jinetes.length){
+				System.out.println("Sexo Jinete " + (i+1) + " : " + jinetes[i].getSexo());
+				if (jinetes[i].getSexo()==SexoEnum.Femenino) {
+					System.out.println("Esta carrera es para jinetes masculino");
+				}
+				i++;
+			}
+
+			System.out.println("");
+			System.out.println("Opcion 4: DO WHILE");
+			i = 0; //Ya existe y lo volvemos a utilizar
+			// AL MENOS se ejecuta una vez
+			do {
+				System.out.println("Sexo Jinete " + (i+1) + " : " + jinetes[i].getSexo());
+				if (jinetes[i].getSexo()==SexoEnum.Femenino) {
+					System.out.println("Esta carrera es para jinetes masculino");
+				}
+				i++;
+			} while (i<jinetes.length) ;
+			
 		} else {
 			System.out.println("La cantidad de jinetes y caballos no coincide ...");
 		}

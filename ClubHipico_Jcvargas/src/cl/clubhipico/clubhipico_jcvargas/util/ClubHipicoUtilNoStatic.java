@@ -5,22 +5,33 @@ import cl.clubhipico.clubhipico_jcvargas.object.JineteObject;
 import cl.clubhipico.clubhipico_jcvargas.object.CaballoObject;
 import cl.clubhipico.clubhipico_jcvargas.object.PersonaObject;
 
-/* clase utilitario con metodos static */
+/* clase utilitario sin metodos static */
 public class ClubHipicoUtilNoStatic {
 	
-	public void montar(JineteObject jinete, CaballoObject caballo) {
+	private String tipoMontar = "Clasico";
+	public static String tipoMJinete = "Jinete Clasico";
+	
+	public static void montar(JineteObject jinete, CaballoObject caballo) {
 		jinete.setCaballo(caballo);
 		System.out.println("Jinete " + jinete.getNombre() + " se monta en " + caballo.getNombre());
+
+		// tipoMontar = "" ;  NO PERMITIDO
+		tipoMJinete = "FSDFD"; // Cambia a todas las clases el valor
 	}
 
 	/* Existe una sobrecarga de metodo con respecto al montar caballo */
 	public void montar(PersonaObject persona, CaballoObject caballo) {
 		/*persona.setCaballo(caballo);*/
 		System.out.println("Persona " + persona.getNombre() + " no se puede montar en caballo " + caballo.getNombre());
+		
+		tipoMontar = "" ; // PERMITIDO ya que llama a una variable global
+		tipoMJinete = "FSDFD"; // Cambia a todas las clases el valor  
 	}
 
 	/* Existe una sobrecarga del metodo montar, recibiendo arreglos de jinetes y caballos */
 	public void montar(JineteObject[] jinetes, CaballoObject[] caballos) {
+		
+		tipoMJinete = "FSDFD"; // Cambia a todas las clases el valor 
 		
 		//Validacion
 		//Condicional if
@@ -32,7 +43,7 @@ public class ClubHipicoUtilNoStatic {
 				System.out.println("Se requiere por lo menos un jinete y un caballo");
 			}
 			// Accedemos al primer jinete y evaluamos que sea sexo masculino
-			if (jinetes[0].getSexo()!=SexoEnum.Macho) {
+			if (jinetes[0].getSexo()!=SexoEnum.Masculino) {
 				System.out.println("El primer jinete tiene que ser de sexo masculino...");
 			}
 		} else {

@@ -32,26 +32,26 @@ public class ClubHipicoArregloMail {
 		jinetesArray[2] = new JineteObject();
 		// 3- Manipulas, llenas con informacion o usas funciones / metodos
 		jinetesArray[0].setNombre("Pepito");
-		jinetesArray[0].setSexo(SexoEnum.Hembra);
 		jinetesArray[1].setNombre("Juanito");
 		jinetesArray[2].setNombre("Pedrito");
+		jinetesArray[0].setSexo(SexoEnum.Femenino);
+		jinetesArray[1].setSexo(SexoEnum.Femenino);
+		jinetesArray[2].setSexo(SexoEnum.Femenino);
 		
 		System.out.println("");
 		
 		//Arreglo Caballos
 		// 1- Otra forma de instanciar el arreglo
 		CaballoObject[] caballosArray = {caballo, caballo, caballo };
-		// 2- Manipulas, llenas con informacion o usas funciones / metodos
-		/*caballosArray[0].setNombre("Pepito");
-		caballosArray[1].setNombre("Juanito");
-		caballosArray[2].setNombre("Pedrito");*/
-		
+
 		ClubHipicoUtil.montar(jinetesArray, caballosArray);
 		
 		System.out.println("");
 		System.out.println("Utilitario No Static");
 		ClubHipicoUtilNoStatic util = new ClubHipicoUtilNoStatic();
 		util.montar(jinetesArray, caballosArray);
+		System.out.println("");
+		util.montar(jinete, caballo);
      
 	}
 

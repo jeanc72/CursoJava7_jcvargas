@@ -37,7 +37,7 @@ public class ClubHipicoMain {
 		caballo2.setNombre("Caballo Juanito Perez");
 		caballo2.setPeso(500);
 		caballo2.setRut(123456789);
-		caballo2.setSexo(SexoEnum.Macho);
+		caballo2.setSexo(SexoEnum.Masculino);
 		
 		System.out.println("Caballo2 Object : " + caballo2);
 		/* Caballo2 Object : AnimalObject [nombre=Caballo Juanito Perez, peso=500, rut=123456789, sexo=Macho] */
