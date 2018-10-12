@@ -15,7 +15,7 @@ public class ClubHipicoUtilNoStatic {
 		jinete.setCaballo(caballo);
 		System.out.println("Jinete " + jinete.getNombre() + " se monta en " + caballo.getNombre());
 
-		// tipoMontar = "" ;  NO PERMITIDO
+		// tipoMontar = "" ;  NO PERMITIDO, ya que de un metodo estatico no puedo invocar directamente a una propiedad estatica
 		tipoMJinete = "FSDFD"; // Cambia a todas las clases el valor
 	}
 
@@ -24,7 +24,7 @@ public class ClubHipicoUtilNoStatic {
 		/*persona.setCaballo(caballo);*/
 		System.out.println("Persona " + persona.getNombre() + " no se puede montar en caballo " + caballo.getNombre());
 		
-		tipoMontar = "" ; // PERMITIDO ya que llama a una variable global
+		tipoMontar = "" ; // PERMITIDO ya que llama a una variable global dentro de la misma instancia
 		tipoMJinete = "FSDFD"; // Cambia a todas las clases el valor  
 	}
 

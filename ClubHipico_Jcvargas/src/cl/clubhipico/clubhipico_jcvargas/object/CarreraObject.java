@@ -5,7 +5,7 @@ public class CarreraObject {
 	 * Para acceder se antepone this. */
     private String nombre;
     private int distancia;
-    private PistaObject pista;
+	private PistaObject pista;
     private CaballoObject caballo1;
     private CaballoObject caballo2;
     private CaballoObject caballo3;
@@ -76,6 +76,13 @@ public class CarreraObject {
     public ApostadorObject getApostador() {
     	return this.apostador; 
     }
-    
+
+    @Override
+	public String toString() {
+		return "CarreraObject [nombre=" + nombre + ", distancia=" + distancia
+				+ ", pista=" + pista + ", caballo1=" + caballo1 + ", caballo2="
+				+ caballo2 + ", caballo3=" + caballo3 + ", tipoapuesta="
+				+ tipoapuesta + ", apostador=" + apostador + "]";
+	}
     
 }

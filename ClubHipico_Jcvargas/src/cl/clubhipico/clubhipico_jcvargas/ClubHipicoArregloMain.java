@@ -7,7 +7,7 @@ import cl.clubhipico.clubhipico_jcvargas.object.PersonaObject;
 import cl.clubhipico.clubhipico_jcvargas.util.ClubHipicoUtil;
 import cl.clubhipico.clubhipico_jcvargas.util.ClubHipicoUtilNoStatic;
 
-public class ClubHipicoArregloMail {
+public class ClubHipicoArregloMain {
 
 	public static void main(String[] args) {
 		
