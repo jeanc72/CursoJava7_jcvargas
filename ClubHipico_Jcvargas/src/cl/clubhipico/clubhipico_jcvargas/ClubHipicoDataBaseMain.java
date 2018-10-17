@@ -28,12 +28,13 @@ public class ClubHipicoDataBaseMain {
         carrera.setDistancia(distanciaCarrera);
         
         /*Usamos el controlador*/
-        //accion de insertar
+        //accion de insertar 
         carreraController.insert(carrera);
         carreraController.update(carrera);
         
         System.out.println("Carrera recibida "+carrera);
         System.out.println("Distancia "+ carrera.getDistancia());
+        
         
 	}
 
