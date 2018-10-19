@@ -9,6 +9,7 @@ public class AnimalObject {
 	private String nombre;
 	private int peso;
 	private int rut;
+	private char dv;
 	private SexoEnum sexo;
 	
 	public String getNombre() {
@@ -33,6 +34,15 @@ public class AnimalObject {
 	
 	public void setRut(int rut) {
 		this.rut = rut;
+	}
+
+	
+	public char getDv() {
+		return dv;
+	}
+
+	public void setDv(char dv) {
+		this.dv = dv;
 	}
 
 	public SexoEnum getSexo() {
