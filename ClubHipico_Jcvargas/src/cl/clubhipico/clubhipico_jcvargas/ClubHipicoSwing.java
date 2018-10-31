@@ -1,8 +1,10 @@
 package cl.clubhipico.clubhipico_jcvargas;
 
+import java.awt.Color;
 import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -74,7 +76,7 @@ public class ClubHipicoSwing extends JFrame implements ActionListener {
         this.add(consola);
         
         consola.setBounds(50, 180, 450, 270);  // colocamos posicion y tamanio al boton (x, y, ancho, alto)
-
+        consola.setBackground(Color.GREEN);
         
     }
 

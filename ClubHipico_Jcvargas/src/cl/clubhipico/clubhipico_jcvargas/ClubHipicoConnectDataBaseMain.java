@@ -28,14 +28,18 @@ public class ClubHipicoConnectDataBaseMain {
         ConnectDataBaseUtil db = new ConnectDataBaseUtil();
         db.executarQuery(insert);
                
+        /*Update*/
+        String update = "update caballo set nombre = 'PEPITO' where rut = 1191885" ;
+        db.executarQuery(update);
         
         /*Select*/
         String query = "SELECT * FROM CABALLO"; //No recomendado con *, escribir columnas. 
         ResultSet resultset = db.select(query);
         
         while (resultset.next()) {
-        	System.out.println("RUT: "+resultset.getString("RUT")+"    Nombre caballo:"+resultset.getString("NOMBRE"));
+        	System.out.println("RUT: " + resultset.getString("RUT") + " Nombre caballo: "+ resultset.getString("NOMBRE"));
         }
+        
         System.out.println("Fin");
         
         
